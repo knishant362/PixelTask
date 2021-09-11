@@ -4,7 +4,6 @@ import com.google.gson.Gson
 import com.google.gson.GsonBuilder
 import com.trendster.pixeltask.data.ApiService
 import com.trendster.pixeltask.model.OfferData
-import com.trendster.pixeltask.model.OfferData2
 import okhttp3.Interceptor
 import okhttp3.OkHttpClient
 import retrofit2.Response
@@ -42,7 +41,7 @@ class RemoteDataSource {
         .build()
         .create(ApiService::class.java)
 
-    suspend fun getData(): Response<OfferData2> {
+    suspend fun getData(): Response<OfferData> {
         return apicall.getData()
     }
 }

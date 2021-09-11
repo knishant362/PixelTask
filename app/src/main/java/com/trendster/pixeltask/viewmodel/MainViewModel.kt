@@ -5,14 +5,13 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.trendster.pixeltask.model.OfferData
-import com.trendster.pixeltask.model.OfferData2
 import com.trendster.pixeltask.repository.RemoteDataSource
 import kotlinx.coroutines.launch
 
 class MainViewModel : ViewModel() {
 
     private val remoteDataSource = RemoteDataSource()
-    val responseData = MutableLiveData<OfferData2>()
+    val responseData = MutableLiveData<OfferData>()
 
     fun getData() {
         viewModelScope.launch {
